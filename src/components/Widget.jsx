@@ -24,7 +24,7 @@ export const Widget = ({ projectId }) => {
       p_user_name: form.name.value,
       p_user_email: form.email.value,
       p_message: form.feedback.value,
-      p_rating: rating,
+      p_rating: rating      
     };
     const { data: returnedData, error } = await supabase.rpc("add_feedback", data);
     setSubmitted(true);
